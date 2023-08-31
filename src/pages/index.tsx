@@ -17,7 +17,7 @@ export default function Home() {
   const SEOImageURL = `https://og-image.the-guild.dev/conf${searchParam}`
 
   return (
-    <main className='bg-[#171e26] min-h-screen flex flex-col'>
+    <main className='bg-[#171e26] min-h-screen flex flex-col overflow-x-hidden'>
       <Head>
         <meta
           name='keywords'
@@ -40,13 +40,13 @@ export default function Home() {
         <meta name='twitter:image' content={SEOImageURL} />
       </Head>
 
-      <div className='px-16 py-5 border-solid border-b-[#343a46] border-b-[1px] flex justify-between items-center'>
+      <div className='lg:px-16 px-6 py-5 border-solid border-b-[#343a46] border-b-[1px] flex justify-between items-center'>
         <a
           href='https://graphql.org/conf'
-          className='font-medium hover:underline flex items-center gap-2'
+          className='font-medium hover:underline flex items-center lg:gap-2 gap-1'
         >
           <svg
-            className='w-9 h-9'
+            className='lg:w-9 lg:h-9 w-7 h-7'
             version='1.1'
             id='GraphQL_Logo'
             xmlns='http://www.w3.org/2000/svg'
@@ -189,9 +189,9 @@ export default function Home() {
               />
             </g>
           </svg>
-          GraphQL Conf 2023
+          <span className='lg:text-base text-sm'>GraphQL Conf 2023</span>
         </a>
-        <div className='text-[#bcc1cd] font-medium text-sm flex gap-6'>
+        <div className='text-[#bcc1cd] font-medium text-sm flex lg:gap-6 gap-3'>
           <a
             className='hover:underline'
             href='https://graphql.org/conf/speakers/'
@@ -207,12 +207,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='h-full flex px-[10%] items-center flex-1 justify-between lg:flex-row flex-col py-10 lg:py-0'>
+      <div className='h-full flex lg:px-[10%] px-6 items-center flex-1 justify-between lg:flex-row flex-col py-10 lg:py-0'>
         <div className='lg:mb-9 mb-0'>
-          <h1 className='lg:text-5xl text-3xl font-bold'>
+          <h1 className='lg:text-5xl text-2xl font-bold'>
             {fullName}'s Ticket
           </h1>
-          <div className='text-xl pt-[24px] pb-[45px]'>
+          <div className='lg:text-xl text-base lg:pt-[24px] pt-[12px] lg:pb-[45px] pb-[30px]'>
             Join me <span className='font-medium'>September 19-21, 2023</span>.
             In <span className='font-medium'>San Francisco Bay Area, CA</span>
           </div>

@@ -53,7 +53,7 @@ body {
   content: '';
   display: block;
   position: absolute;
-  top: 130px;
+  top: calc(50% - 30px);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -82,7 +82,7 @@ body {
   content: '';
   display: block;
   position: absolute;
-  top: 130px;
+  top: calc(50% - 26px);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -101,7 +101,7 @@ body {
 .left,
 .right {
   position: absolute;
-  top: 110px;
+  top: calc(50% - 30px);
   width: 50px;
   height: 100px;
   background: #171e26;
