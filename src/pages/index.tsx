@@ -220,7 +220,7 @@ export default function Home() {
             href='https://cvent.me/4zbxz9'
             className='px-6 py-3.5 bg-[#f6009b] rounded-md w-max font-medium'
           >
-            Get Your Ticket!
+            Join me at GraphQL Conf!
           </a>
         </div>
 
