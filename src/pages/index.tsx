@@ -214,7 +214,7 @@ export default function Home() {
           </h1>
           <div className='lg:text-xl text-base lg:pt-[24px] pt-[12px] lg:pb-[45px] pb-[30px]'>
             Join me <span className='font-medium'>September 19-21, 2023</span>{' '}
-            in <span className='font-medium'>San Francisco Bay Area, CA</span>
+            in <span className='font-medium'>San Francisco, CA</span>
           </div>
           <a
             href='https://cvent.me/4zbxz9'
