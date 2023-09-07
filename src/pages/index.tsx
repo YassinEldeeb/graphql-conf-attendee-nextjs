@@ -2,7 +2,6 @@ import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 export default function Home({ domain }: any) {
   const router = useRouter()
@@ -228,24 +227,14 @@ export default function Home({ domain }: any) {
               Join me at GraphQL Conf!
             </a>
 
-            <CopyToClipboard
-              text={`${domain}${router.asPath}`}
-              onCopy={() => {
-                setIsCopied(true)
-                setTimeout(() => {
-                  setIsCopied(false)
-                }, 5000)
-              }}
+            <a
+              href='https://twitter.com/intent/tweet?text=I%27m%20joining%20%23GraphQLConf%202023%2C%20see%20you%20there%21'
+              target='_blank'
+              className='relative box-border lg:ml-4 lg:mt-0 mt-4 cursor-pointer px-5 py-3.5 rounded-md w-max font-medium'
             >
-              <a
-                href='https://twitter.com/intent/tweet?text=I%27m%20joining%20%23GraphQLConf%202023%2C%20see%20you%20there%21'
-                target='_blank'
-                className='relative box-border lg:ml-4 lg:mt-0 mt-4 cursor-pointer px-5 py-3.5 rounded-md w-max font-medium'
-              >
-                Share on Twitter!
-                <span className='absolute inset-0 border-2 rounded-md'></span>
-              </a>
-            </CopyToClipboard>
+              Share on Twitter!
+              <span className='absolute inset-0 border-2 rounded-md'></span>
+            </a>
           </div>
         </div>
 
