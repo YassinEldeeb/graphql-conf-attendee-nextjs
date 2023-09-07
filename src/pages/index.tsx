@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
-export default function Home() {
+export default function Home({ domain }: any) {
   const router = useRouter()
 
   const { fullName, jobTitle, company } = router.query
@@ -17,6 +17,11 @@ export default function Home() {
   const SEOImageURL = `https://og-image.the-guild.dev/conf${searchParam}`
 
   const [isTicketLoaded, setIsTicketLoaded] = useState(false)
+
+  const tweetText = `I'm joining #GraphQLConf 2023, see you there!
+
+Look at my cool ticket!
+${domain}${router.asPath}`
 
   return (
     <main className='bg-[#171e26] min-h-screen flex flex-col overflow-x-hidden'>
@@ -227,7 +232,9 @@ export default function Home() {
             </a>
 
             <a
-              href='https://twitter.com/intent/tweet?text=I%27m%20joining%20%23GraphQLConf%202023%2C%20see%20you%20there%21'
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                tweetText
+              )}`}
               target='_blank'
               className='relative box-border lg:ml-4 lg:mt-0 mt-4 cursor-pointer px-5 py-3.5 rounded-md w-max font-medium'
             >
