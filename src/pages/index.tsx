@@ -253,7 +253,7 @@ ${domain}${router.asPath}`
         </div>
 
         <div
-          className='ticket lg:max-w-[45%] max-w-[100%] transition ease-in-out'
+          className='ticket lg:max-w-[45%] max-w-[100%] transition-none'
           style={{
             opacity: isTicketLoaded ? 1 : 0,
           }}
