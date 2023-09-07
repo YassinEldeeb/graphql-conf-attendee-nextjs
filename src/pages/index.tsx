@@ -220,10 +220,10 @@ ${domain}${router.asPath}`
             Join me <span className='font-medium'>September 19-21, 2023</span>{' '}
             in <span className='font-medium'>San Franciscoyar , CA</span>
           </div>
-          <div className=''>
+          <div className='lg:block grid col-span-1'>
             <a
               href='https://cvent.me/4zbxz9'
-              className='px-6 py-3.5 bg-[#f6009b] rounded-md w-max font-medium '
+              className=' px-6 py-3.5 bg-[#f6009b] rounded-md w-max font-medium '
             >
               Join me at GraphQL Conf!
             </a>
