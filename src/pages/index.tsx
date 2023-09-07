@@ -1,7 +1,6 @@
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
 
 export default function Home({ domain }: any) {
   const router = useRouter()
