@@ -11,8 +11,7 @@ export default function Home({ domain }: any) {
     ? router.asPath.slice(1)
     : router.asPath
 
-  const SEOTitle = `${fullName} is attending GraphQL Conf 2023 in San Francisco Bay Area,
-          CA`
+  const SEOTitle = `${fullName} is attending GraphQL Conf 2023 in San Francisco Bay Area, CA`
   const SEODescription =
     'GraphQLConf 2023 hosted by the GraphQL Foundation. September 19-21, 2023. San Francisco Bay Area, California'
   const SEOImageURL = `https://og-image.the-guild.dev/conf${searchParam}`
