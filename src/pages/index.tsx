@@ -16,20 +16,10 @@ export default function Home({ domain }: any) {
     'GraphQLConf 2023 hosted by the GraphQL Foundation. September 19-21, 2023. San Francisco Bay Area, California'
   const SEOImageURL = `https://og-image.the-guild.dev/conf${searchParam}`
 
-  const [isTicketLoaded, setIsTicketLoaded] = useState(false)
-
   const tweetText = `I'm joining #GraphQLConf 2023, see you there!
 
 Look at my cool ticket!
 ${domain}${router.asPath}`
-
-  useEffect(() => {
-    const img = new Image()
-    img.src = SEOImageURL
-    if (img.complete) {
-      setIsTicketLoaded(true)
-    }
-  }, [])
 
   return (
     <main className='bg-[#171e26] min-h-screen flex flex-col overflow-x-hidden'>
@@ -252,20 +242,11 @@ ${domain}${router.asPath}`
           </div>
         </div>
 
-        <div
-          className='ticket lg:max-w-[45%] max-w-[100%] transition-none'
-          style={{
-            opacity: isTicketLoaded ? 1 : 0,
-          }}
-        >
+        <div className='ticket lg:max-w-[45%] max-w-[100%] transition-none'>
           <div className='left'></div>
           <div className='right'></div>
           <div className='ticket-content-wrapper'>
-            <img
-              onLoad={() => setIsTicketLoaded(true)}
-              src={SEOImageURL}
-              className='rounded-[15px]'
-            ></img>
+            <img src={SEOImageURL} className='rounded-[15px]'></img>
           </div>
         </div>
       </div>
