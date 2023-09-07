@@ -254,7 +254,7 @@ ${domain}${router.asPath}`
           <div className='right'></div>
           <div className='ticket-content-wrapper'>
             <img
-              onLoad={() => setIsTicketLoaded(true)}
+              // onLoad={() => setIsTicketLoaded(true)}
               src={SEOImageURL}
               className='rounded-[15px]'
             ></img>
