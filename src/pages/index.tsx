@@ -207,14 +207,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='h-full flex lg:px-[10%] px-6 items-center flex-1 justify-between lg:flex-row flex-col py-10 lg:py-0'>
+      <div className='h-full flex lg:px-[10%] px-6 items-center flex-1 lg:justify-between gap-20 lg:flex-row flex-col py-10 lg:py-0'>
         <div className='lg:mb-9 mb-0'>
           <h1 className='lg:text-5xl text-2xl font-bold'>
             {fullName}'s Ticket
           </h1>
           <div className='lg:text-xl text-base lg:pt-[24px] pt-[12px] lg:pb-[45px] pb-[30px]'>
             Join me <span className='font-medium'>September 19-21, 2023</span>{' '}
-            in <span className='font-medium'>San Francisco, CA</span>
+            in <span className='font-medium'>San Franciscoyar , CA</span>
           </div>
           <a
             href='https://cvent.me/4zbxz9'
