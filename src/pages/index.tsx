@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
-export default function Home({ domain }: any) {
+export default function Home() {
   const router = useRouter()
 
   const { fullName, jobTitle, company } = router.query
@@ -16,7 +16,7 @@ export default function Home({ domain }: any) {
     'GraphQLConf 2023 hosted by the GraphQL Foundation. September 19-21, 2023. San Francisco Bay Area, California'
   const SEOImageURL = `https://og-image.the-guild.dev/conf${searchParam}`
 
-  const [isCopied, setIsCopied] = useState(false)
+  const [isTicketLoaded, setIsTicketLoaded] = useState(false)
 
   return (
     <main className='bg-[#171e26] min-h-screen flex flex-col overflow-x-hidden'>
@@ -237,11 +237,20 @@ export default function Home({ domain }: any) {
           </div>
         </div>
 
-        <div className='ticket lg:max-w-[45%] max-w-[100%]'>
+        <div
+          className='ticket lg:max-w-[45%] max-w-[100%] transition ease-in-out'
+          style={{
+            opacity: isTicketLoaded ? 0 : 1,
+          }}
+        >
           <div className='left'></div>
           <div className='right'></div>
           <div className='ticket-content-wrapper'>
-            <img src={SEOImageURL} className='rounded-[15px]'></img>
+            <img
+              onLoad={() => setIsTicketLoaded(true)}
+              src={SEOImageURL}
+              className='rounded-[15px]'
+            ></img>
           </div>
         </div>
       </div>
