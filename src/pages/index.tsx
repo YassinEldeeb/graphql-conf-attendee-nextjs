@@ -247,14 +247,14 @@ ${domain}${router.asPath}`
         <div
           className='ticket lg:max-w-[45%] max-w-[100%] transition ease-in-out'
           style={{
-            opacity: isTicketLoaded ? 0 : 1,
+            opacity: isTicketLoaded ? 1 : 0,
           }}
         >
           <div className='left'></div>
           <div className='right'></div>
           <div className='ticket-content-wrapper'>
             <img
-              // onLoad={() => setIsTicketLoaded(true)}
+              onLoad={() => setIsTicketLoaded(true)}
               src={SEOImageURL}
               className='rounded-[15px]'
             ></img>
