@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home({ domain }: any) {
   const router = useRouter()
@@ -22,6 +22,14 @@ export default function Home({ domain }: any) {
 
 Look at my cool ticket!
 ${domain}${router.asPath}`
+
+  useEffect(() => {
+    const img = new Image()
+    img.src = SEOImageURL
+    if (img.complete) {
+      setIsTicketLoaded(true)
+    }
+  }, [])
 
   return (
     <main className='bg-[#171e26] min-h-screen flex flex-col overflow-x-hidden'>
