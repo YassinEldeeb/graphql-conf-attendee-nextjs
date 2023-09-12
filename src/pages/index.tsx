@@ -218,7 +218,7 @@ ${domain}${router.asPath}`
           </h1>
           <div className='lg:text-xl text-base lg:pt-[24px] pt-[12px] lg:pb-[45px] pb-[30px]'>
             Join me <span className='font-medium'>September 19-21, 2023</span>{' '}
-            in <span className='font-medium'>San Francisco , CA</span>
+            in <span className='font-medium'>San Francisco, CA</span>
           </div>
           <div className='lg:block grid col-span-1'>
             <a
