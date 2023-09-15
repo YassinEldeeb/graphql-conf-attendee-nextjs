@@ -241,13 +241,7 @@ ${domain}${router.asPath}`
           </div>
         </div>
 
-        <div className='ticket lg:max-w-[45%] max-w-[100%] transition-none'>
-          <div className='left'></div>
-          <div className='right'></div>
-          <div className='ticket-content-wrapper'>
-            <img src={SEOImageURL} className='rounded-[15px]'></img>
-          </div>
-        </div>
+        <img src={SEOImageURL} className='ticket rounded-[15px]'></img>
       </div>
     </main>
   )
